@@ -1,0 +1,649 @@
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(47, 38, 38);
+        }
+
+        p {
+            color: azure;
+        }
+
+        .parent {
+
+            display: grid;
+            gap: 10px;
+            margin-top: 20px;
+
+            grid-template-columns: 490px 490px 490px;
+            grid-template-rows: 333px 333px;
+        }
+
+        .a1 {
+
+            background-color: rgb(130, 57, 11);
+        }
+
+        .a2 {
+
+            background-color: rgb(147, 100, 6);
+        }
+
+        .a3 {
+
+            background-color: rgb(199, 205, 17);
+        }
+
+        .b1 {
+
+            background-color: rgb(69, 130, 11);
+        }
+
+        .b2 {
+
+            background-color: rgb(6, 8, 147);
+        }
+
+        .b3 {
+            background-color: rgb(199, 205, 17);
+        }
+
+        .parent2 {
+            margin-top: 100px;
+            row-gap: 9px;
+            column-gap: 9px;
+            display: grid;
+            grid-template-areas: "br br an"
+                "bh rh an";
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 200px 200px 200px;
+
+        }
+
+        .c1 {
+            grid-area: br;
+            background-color: blueviolet;
+        }
+
+        .c2 {
+            grid-area: an;
+            background-color: chartreuse;
+        }
+
+        .c3 {
+            grid-area: bh;
+            background-color: brown;
+        }
+
+        .c4 {
+            grid-area: rh;
+            background-color: bisque;
+        }
+
+        .parent3 {
+            row-gap: 9px;
+            column-gap: 9px;
+            display: grid;
+            grid-template-areas: "hdr hdr hdr"
+                "br sbr sbr"
+                "ftr ftr ftr";
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 200px 200px 200px;
+        }
+
+        .d1 {
+            grid-area: hdr;
+            background-color: orange;
+        }
+
+        .d2 {
+            grid-area: br;
+            background-color: rgb(1, 50, 44);
+        }
+
+        .d3 {
+            grid-area: sbr;
+            background-color: rgb(107, 55, 55);
+        }
+
+        .d4 {
+            grid-area: ftr;
+            background-color: aqua;
+        }
+
+        .parent4 {
+            margin-top: 100px;
+            row-gap: 9px;
+            column-gap: 9px;
+            display: grid;
+            grid-template-areas: "hd hd pd pd"
+                "sr bh bh bh"
+                "ft ft ft ft";
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 200px 200px 80px;
+        }
+
+        .e1 {
+            grid-area: hd;
+            background-color: orange;
+        }
+
+        .e2 {
+            grid-area: pd;
+            background-color: orangered;
+        }
+
+        .e3 {
+            grid-area: sr;
+            background-color: darkcyan;
+        }
+
+        .e4 {
+            grid-area: bh;
+            background-color: green;
+        }
+
+        .e5 {
+            grid-area: ft;
+            background-color: rgb(240, 184, 81);
+        }
+
+        .parent5 {
+            row-gap: 10px;
+            column-gap: 10px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 25vh 25vh 25vh;
+        }
+
+        .f1 {
+            background-color: blueviolet;
+        }
+
+        .f2 {
+            background-color: red;
+        }
+
+        .f3 {
+            background-color: rgb(13, 56, 198);
+        }
+
+        .f4 {
+            background-color: rgb(218, 17, 233);
+        }
+
+        .f5 {
+            background-color: rgb(4, 149, 81);
+        }
+
+        .f6 {
+            background-color: rgb(37, 184, 210);
+        }
+
+        .f7 {
+            background-color: rgb(43, 131, 203);
+        }
+
+        .f8 {
+            background-color: rgb(13, 183, 183);
+        }
+
+        .f9 {
+            background-color: blanchedalmond;
+        }
+
+        .f10 {
+            background-color: rgb(127, 81, 12);
+        }
+
+        .f11 {
+            background-color: rgb(201, 230, 11);
+        }
+
+        .f12 {
+            background-color: rgb(9, 146, 167);
+        }
+
+        .f13 {
+            background-color: rgb(158, 98, 8);
+        }
+
+        .f14 {
+            background-color: rgb(83, 8, 196);
+        }
+
+        .f15 {
+            background-color: rgb(139, 86, 6);
+        }
+
+        .f16 {
+            background-color: rgb(42, 29, 11);
+        }
+
+        .f17 {
+            background-color: rgb(26, 181, 205);
+        }
+
+        .f18 {
+            background-color: rgb(13, 205, 29);
+        }
+
+        .parent6 {
+            row-gap: 10px;
+            column-gap: 10px;
+            display: grid;
+            grid-template-areas: "hr hr br kr"
+                                 "sr dr nr  mr"
+                                 "sd sd ar qw"
+                                 "sd sd cr pr"
+                                 "xd xd xd bn";
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 80px 80px 80px 80px 80px;
+            grid-column: 1/3;
+        }
+
+        .g1 {
+            grid-area: hr;
+            background-color: rgb(199, 10, 57);
+        }
+
+        .g2 {
+            grid-area: hr;
+            background-color: rgb(16, 9, 147);
+        }
+
+        .g3 {
+            grid-area: br;
+            background-color: rgb(22, 171, 182);
+        }
+
+        .g4 {
+            grid-area: kr;
+            background-color: rgb(0, 255, 94);
+        }
+
+        .g5 {
+            grid-area: sr;
+            background-color: rgb(197, 161, 16);
+        }
+
+        .g6 {
+            grid-area: dr;
+            background-color: orange;
+        }
+
+        .g7 {
+            grid-area: nr;
+            background-color: rgb(21, 0, 255);
+        }
+
+        .g8 {
+            grid-area: mr;
+            
+        }
+
+        .g9 {
+            grid-area: sd;
+            background-color: rgb(43, 16, 167);
+        }
+
+        .g10 {
+            grid-area: sd;
+            background-color: rgb(16, 199, 215);
+        }
+        .g11 {
+            grid-area: ar;
+            background-color: rgb(51, 9, 175);
+        }
+        .g12 {
+            grid-area: qw;
+            background-color: rgb(25, 202, 66);
+        }
+        .g13 {
+            grid-area: sd;
+            background-color: rgb(203, 136, 12);
+        }
+        .g14 {
+            grid-area: sd;
+            background-color: rgb(236, 240, 10);
+        }
+        .g15 {
+            grid-area: cr;
+            background-color: rgb(255, 0, 13);
+        }
+        .g16 {
+            grid-area: pr;
+            
+        }
+        .g17 {
+            grid-area: xd;
+            background-color: rgb(255, 0, 0);
+        }
+        .g18 {
+            grid-area: xd;
+            background-color: rgb(255, 0, 212);
+        }
+        .g19 {
+            grid-area: xd;
+            background-color: rgb(164, 18, 152);
+        }
+        .g20 {
+            grid-area: bn;
+            background-color: orange;
+        }
+       .parent7{
+        row-gap: 10px;
+        column-gap: 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 100px 50vh;
+       } 
+       .h1{
+        background-color: orange;
+       }
+       .h2{
+        background-color: aqua;
+       }
+       .h3{
+        background-color: brown;
+       }
+       .h4{
+       
+        row-gap: 6px;
+        column-gap: 6px;
+        display: grid;
+        grid-template-areas: "br br"
+                              "sr vr";
+        grid-template-columns:  1fr 1fr ;
+        grid-template-rows: 20vh 27vh;
+        background-color: bisque;
+       }
+       .h5{
+         margin-left: 15px;
+         margin-right:15px;
+         margin-top: 20px;
+        grid-area: br;
+        background-color: chartreuse;
+        display: grid;
+        
+       }
+       .h6{
+         margin-left: 15px;
+        grid-area: sr;
+        background-color: blue;
+       }
+       .h7{
+        margin-right:15px;
+        grid-area: vr;
+        background-color: darkolivegreen;
+       }
+
+       .parent8{
+        row-gap: 10px;
+        column-gap: 10px;
+        display: grid;
+        grid-template-areas: "aq sw de fr gt"
+                             "hy ju ki ki ki"
+                             "lo lo lo lo lo";
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 200px 200px 200px;
+        
+       }
+       .i1{
+        grid-area: aq;
+        background-color: rgb(129, 151, 5);
+       }
+       .i2{
+        grid-area: sw;
+        background-color: rgb(227, 131, 12);
+       }
+       .i3{
+        grid-area: de;
+        background-color: rgb(225, 196, 161);
+       }
+       .i4{
+        grid-area: fr;
+        background-color: rgb(185, 18, 154);
+       }
+       .i5{
+        grid-area: gt;
+        background-color: rgb(38, 19, 209);
+       }
+       .i6{
+        grid-area: hy;
+        background-color: bisque;
+       }
+       .i7{
+        grid-area: ju;
+        background-color: rgb(12, 203, 224);
+       }
+        .i8{
+            grid-area: ki;
+        background-color: rgb(47, 211, 5);
+       }
+        .i9{
+            grid-area: ki;
+        background-color: rgb(21, 143, 196);
+       }
+        .i10{
+            grid-area: ki;
+        background-color: rgb(103, 119, 197);
+       }
+        .i11{
+            grid-area: lo;
+        background-color: rgb(169, 8, 64);
+       }
+        .i12{
+            grid-area: lo;
+        background-color: rgb(255, 196, 201);
+       }
+        .i13{
+            grid-area: lo;
+        background-color: rgb(15, 163, 22);
+       }
+        .i14{
+            grid-area: lo;
+        background-color: rgb(18, 154, 175);
+       }
+        .i15{
+            grid-area: lo;
+        background-color: rgb(178, 102, 9);
+       }
+       .parent9{
+        row-gap: 10px;
+        column-gap: 10px;
+        display: grid;
+        grid-template-areas: "hd hd hd"
+                             "aq sw sw"
+                             "aq de fr";
+         grid-template-columns: 1fr 1fr 1fr;
+         grid-template-rows: 200px 200px 200px;
+       }
+       .j1,.j2,.j3{
+        grid-area: hd;
+        background-color: orangered;
+       }
+       /* .j2{
+        grid-area: hd;
+
+       }
+       .j3{
+        grid-area: hd;
+       } */
+       .j4{
+        background-color: aqua;
+        grid-area: aq;
+       }
+       .j5,.j6{
+        background-color: blueviolet;
+        grid-area: sw;
+       }
+       /* .j6{
+        grid-area: sw;
+       } */
+       .j7{
+        background-color: chocolate;
+        grid-area: aq;
+       }
+       .j8{
+        background-color: crimson;
+        grid-area: de;
+       }
+       .j9{
+        background-color: darkcyan;
+        grid-area: fr;
+       }
+       
+        
+    </style>
+</head>
+
+<body>
+    <p>section1</p>
+    <div class="parent">
+        <div class="a1"></div>
+        <div class="a2"></div>
+        <div class="a3"></div>
+        <div class="b1"></div>
+        <div class="b2"></div>
+        <div class="b3"></div>
+
+    </div>
+
+
+    <p>section2</p>
+    <div class="parent2">
+        <div class="c1"></div>
+        <div class="c2"></div>
+        <div class="c3"></div>
+        <div class="c4"></div>
+    </div>
+
+
+
+    <p>section3</p>
+    <div class="parent3">
+        <div class="d1"></div>
+        <div class="d2"></div>
+        <div class="d3"></div>
+        <div class="d4"></div>
+    </div>
+
+    <p>section4</p>
+    <div class="parent4">
+        <div class="e1"></div>
+        <div class="e2"></div>
+        <div class="e3"></div>
+        <div class="e4"></div>
+        <div class="e5"></div>
+    </div>
+
+    <p>section5</p>
+    <div class="parent5">
+        <div class="f1"></div>
+        <div class="f2"></div>
+        <div class="f3"></div>
+        <div class="f4"></div>
+        <div class="f5"></div>
+        <div class="f6"></div>
+        <div class="f7"></div>
+        <div class="f8"></div>
+        <div class="f9"></div>
+        <div class="f10"></div>
+        <div class="f11"></div>
+        <div class="f12"></div>
+        <div class="f13"></div>
+        <div class="f14"></div>
+        <div class="f15"></div>
+        <div class="f16"></div>
+        <div class="f17"></div>
+        <div class="f18"></div>
+    </div>
+    <p>section6</p>
+    <div class="parent6">
+        <div class="g1"></div>
+        <div class="g2"></div>
+        <div class="g3"></div>
+        <div class="g4"></div>
+        <div class="g5"></div>
+        <div class="g6"></div>
+        <div class="g7"></div>
+        <div class="g8"></div>
+        <div class="g9"></div>
+        <div class="g10"></div>
+        <div class="g11"></div>
+        <div class="g12"></div>
+        <div class="g13"></div>
+        <div class="g14"></div>
+        <div class="g15"></div>
+        <div class="g16"></div>
+        <div class="g17"></div>
+        <div class="g18"></div>
+        <div class="g19"></div>
+        <div class="g20"></div>
+        </div>
+
+        <p>section7</p>
+        <div class="parent7">
+            <div class="h1"></div>
+            <div class="h2"></div>
+            <div class="h3"></div>
+            <div class="h4">
+                <div class="h5"></div>
+                <div class="h6"></div>
+                <div class="h7"></div>
+            </div>
+        </div>
+         <p>section8</p>
+        <div class="parent8">
+            <div class="i1"></div>
+            <div class="i2"></div>
+            <div class="i3"></div>
+            <div class="i4"></div>
+            <div class="i5"></div>
+            <div class="i6"></div>
+            <div class="i7"></div>
+            <div class="i8"></div>
+            <div class="i9"></div>
+            <div class="i10"></div>
+            <div class="i11"></div>
+            <div class="i12"></div>
+            <div class="i13"></div>
+            <div class="i14"></div>
+            <div class="i15"></div>
+        </div>
+
+        <p>section9</p>
+        <div class="parent9">
+            <div class="j1"></div>
+            <div class="j2"></div>
+            <div class="j3"></div>
+            <div class="j4"></div>
+            <div class="j5"></div>
+            <div class="j6"></div>
+            <div class="j7"></div>
+            <div class="j8"></div>
+            <div class="j9"></div>
+            
+        </div>
+
+        <p>section10</p>
+        <div class="container1">
+            <div class="child1"></div>
+            <div class="container2">
+                <div class="child1"></div>
+                <div class="child2"></div>
+                <div class="child3"></div>
+                <div class="child4"></div>
+            </div>
+            <div class="container3"></div>
+
+        </div>
+</body>
+
+</html>
