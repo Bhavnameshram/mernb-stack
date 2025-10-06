@@ -1,0 +1,14 @@
+.child{
+            height: 300px;
+            width: 400px;
+            background-color: blueviolet;
+            position: relative;
+            animation-name: bhavna;
+            animation-duration: 5s;
+            
+        }
+        @keyframes bhavna {
+        from {top: 0px;}
+         to {top: 200px;}
+            
+        }
