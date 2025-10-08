@@ -1,0 +1,19 @@
+body{
+     background-color: antiquewhite;
+    height: 400%;
+}
+
+
+.sit{
+    position: sticky;
+    height:10px px;
+    width: 10px;
+    top: 90px;
+    padding: 5px;
+    background-color: aqua;
+    border: 2px slid red;  
+}
+main{
+    background-color: antiquewhite;
+    height: 400vh;
+}
