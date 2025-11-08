@@ -57,7 +57,7 @@ p {
 
 }
 
-/* .c1 {
+.c1 {
     grid-area: br;
     background-color: blueviolet;
 }
@@ -524,7 +524,7 @@ p {
     grid-area: aq;
 }
 
-.j8 {
+/* .j8 {
     background-color: crimson;
     grid-area: de;
 }
