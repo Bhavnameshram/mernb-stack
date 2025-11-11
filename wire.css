@@ -498,13 +498,13 @@ p {
     background-color: orangered;
 }
 
-/* .j2{
+.j2{
         grid-area: hd;
 
        }
        .j3{
         grid-area: hd;
-       } */
+       }
 .j4 {
     background-color: aqua;
     grid-area: aq;
@@ -524,7 +524,7 @@ p {
     grid-area: aq;
 }
 
-/* .j8 {
+.j8 {
     background-color: crimson;
     grid-area: de;
 }
@@ -532,4 +532,4 @@ p {
 .j9 {
     background-color: darkcyan;
     grid-area: fr;
-} */
+}
