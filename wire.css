@@ -324,10 +324,10 @@ p {
     background-color: rgb(255, 0, 0);
 }
 
-.g18 {
+/* .g18 {
     grid-area: xd;
     background-color: rgb(255, 0, 212);
-}
+} */
 
 .g19 {
     grid-area: xd;
@@ -516,9 +516,9 @@ p {
     grid-area: sw;
 }
 
-/* .j6{
+.j6{
         grid-area: sw;
-       } */
+       }
 .j7 {
     background-color: chocolate;
     grid-area: aq;
