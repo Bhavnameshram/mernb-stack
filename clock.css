@@ -3,7 +3,7 @@
     margin: 0;
 }
 .con1{
-    height: 1000px;
+    height: 650px;
     width: 500px;
     background-color: black;
     margin-top: 100px;
@@ -20,14 +20,12 @@
 }
 .c2{
     color: white;
-    margin-top: 30px;
-    margin-left: 50px;
-    display: flex;
-    justify-content: center;
 
 }
 .c2 p{
     /* width: 200px; */
+    /* margin-right: 100px; */
+   /* margin-top: 50px; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,7 +34,17 @@
     
 }
 .c2 h1{
-    margin-left: 150px;
+    display: flex;
+    text-align: center;
     justify-content: center;
     
+}
+.c3{
+
+    background-color: bisque;
+height: 50px;
+display: flex;
+    text-align: center;
+    justify-content: center;
+
 }
