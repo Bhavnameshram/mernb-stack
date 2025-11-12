@@ -1,0 +1,42 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.con1{
+    height: 1000px;
+    width: 500px;
+    background-color: black;
+    margin-top: 100px;
+    margin-left: 480px;
+    
+    
+    
+
+}
+.c1 img{
+    width: 350px;
+    height: 500px;
+    margin-left: 50px;
+}
+.c2{
+    color: white;
+    margin-top: 30px;
+    margin-left: 50px;
+    display: flex;
+    justify-content: center;
+
+}
+.c2 p{
+    /* width: 200px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    
+}
+.c2 h1{
+    margin-left: 150px;
+    justify-content: center;
+    
+}
